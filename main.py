@@ -17,7 +17,7 @@ class MainGUI(QtGui.QWidget, Ui_Notifier_Main_GUI):
         username = self.senderEmailLineEdit.text()
         server = smtplib.SMTP("smtp.gmail.com:587")
         server.starttls()
-        server.login(str(username), 'pass') # Aplikacijska sifra koju je da google
+        server.login(str(username), 'pass') # Aplikacijska sifra
         server.sendmail(str(fromaddr), str(toaddrs), str(msg))
         server.quit()
 
